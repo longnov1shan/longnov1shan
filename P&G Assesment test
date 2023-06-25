@@ -1,0 +1,10 @@
+import itertools
+
+def find_unique_digits():
+    for s1, s2, s3, s4 in itertools.permutations(range(1,10), 4):
+        if 42 == (s1 * s2 * s3)-s4:
+            return s1, s2, s3, s4
+    return None
+
+solution = find_unique_digits()
+print(solution)
